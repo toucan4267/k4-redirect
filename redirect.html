@@ -1,0 +1,12 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<meta http-equiv="refresh" content="0">
+<script>
+  const to = new URLSearchParams(location.search).get('to');
+  if (to) location.replace(to);
+</script>
+<p>If nothing happens, copy this into InCopy:<br><code id="u"></code></p>
+<script>
+  document.getElementById('u').textContent = new URLSearchParams(location.search).get('to')||'';
+</script>
